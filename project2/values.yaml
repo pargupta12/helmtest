@@ -1,0 +1,32 @@
+image:
+  repository: your-docker-registry/project1-job-image
+  tag: latest
+
+job:
+  environment:
+    MY_ENV_VAR: "custom_value_for_project1"
+
+configMap:
+  myConfigYAML: |
+    OrgName: cloudtech
+    ProjectName: lkam
+    ServiceId: 12345
+    Environment: prod
+    systems:
+      vault:
+        resources:
+          paths:
+            - base_path: cloudtech/lkam
+              custom_paths:
+                - app/lkam_azure/sp_secrets
+              policy_base_name: cloudtech_lkam_pro
+              roles:
+                admin:
+                  okta:
+                    - name: grp-cloudtech-lkam-admi
+                power:
+                  okta:
+                    - name: grp-cloudtech-lkam-power
+                read:
+                  okta:
+                    - name: grp-cloudtech-lkam-readonly
