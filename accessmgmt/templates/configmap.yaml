@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: my-config1
+  name: {{ .Values.configMap.projectName }}
 data:
   myConfigYAML: |-
 {{ .Values.configMap.myConfigYAML | nindent 4 }}
