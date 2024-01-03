@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: my-job-
+spec:
+  template:
+    spec:
+      containers:
+      - name: my-container
+        image: hello-world:latest
+        command:
+          - "/bin/sh"
+          - "-c"
+        env:
+          - name: MY_ENV_VAR
+            value: "{{ .Values.job.environment.MY_ENV_VAR }}"
+      restartPolicy: Never

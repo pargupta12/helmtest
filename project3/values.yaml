@@ -1,0 +1,10 @@
+configMap:
+  key1: "default_value_key1"
+  key2: "default_value_key2"
+
+job:
+  command:
+    - "/bin/sh"
+    - "-c"
+  environment:
+    MY_ENV_VAR: "default_value"

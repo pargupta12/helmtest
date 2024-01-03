@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-config
+data:
+  key1: "{{ .Values.configMap.key1 }}"
+  key2: "{{ .Values.configMap.key2 }}"
