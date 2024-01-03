@@ -1,11 +1,3 @@
-image:
-  repository: your-docker-registry/project1-job-image
-  tag: latest
-
-job:
-  environment:
-    MY_ENV_VAR: "custom_value_for_project1"
-
 configMap:
   myConfigYAML: |
     OrgName: cloudtech
