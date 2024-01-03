@@ -3,4 +3,5 @@ kind: ConfigMap
 metadata:
   name: my-config1
 data:
-  myConfigYAML: "{{ .Values.configMap.myConfigYAML | nindent 2 }}"
+  myConfigYAML: |-
+{{ .Values.configMap.myConfigYAML | nindent 4 }}
