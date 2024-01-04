@@ -1,4 +1,5 @@
 configMap:
+  projectName: project1
   myConfigYAML: |
     OrgName: cloudtech
     ProjectName: lkam1
