@@ -16,7 +16,7 @@ configMap:
               roles:
                 admin:
                   okta:
-                    - name: grp-cloudtech-lkam-admi
+                    - name: grp-cloudtech-lkam-admin
                 power:
                   okta:
                     - name: grp-cloudtech-lkam-power
