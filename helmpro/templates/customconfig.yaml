@@ -4,4 +4,4 @@ metadata:
   name: custom-configmap
 data:
   custom-file.txt: |-
-    non-k8s-config/custom-file.txt
+    {{ .Files.Get "nonk8s/custom-file.txt" | nindent 4 }}
