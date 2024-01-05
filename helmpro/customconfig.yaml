@@ -1,0 +1,6 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: custom-configmap
+data:
+  custom-file.txt: {{ .Files.Get "nonk8s/custom-file.txt" | quote }}
