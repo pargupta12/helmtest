@@ -4,5 +4,5 @@ kind: ConfigMap
 metadata:
   name: my-configmap
 data:
-  myConfigYAML: |
+  myConfigYAML: |-
 {{ .Files.Get "config.ini" | nindent 2 }}
