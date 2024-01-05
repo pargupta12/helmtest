@@ -1,8 +1,7 @@
-# configmap.yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: my-configmap
 data:
-  myConfigYAML: |-
-{{ .Files.Get "config.ini" | nindent 2 }}
+  myConfigYAML: |
+    {{ .Files.Get "config.ini" | nindent 2 }}
