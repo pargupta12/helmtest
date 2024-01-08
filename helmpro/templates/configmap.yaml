@@ -4,4 +4,4 @@ metadata:
   name: my-configmap
 data:
   myConfigYAML: |
-    {{ .Files.Get "../project2/config.ini" | nindent 2 }}
+    {{ .Files.Get "project2/config.ini" | nindent 2 }}
