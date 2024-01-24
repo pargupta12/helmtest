@@ -14,7 +14,7 @@ spec:
           - name: YAML_STRING
             valueFrom:
               configMapKeyRef:
-                name:  {{ .Values.configMap.projectName }}
+                name: {{ .Values.configMap.projectName }}
                 key: myConfigYAML
       imagePullSecrets:
       - name: my-secret2
