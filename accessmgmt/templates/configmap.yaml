@@ -4,4 +4,4 @@ metadata:
   name: {{ .Values.configMap.projectName }}
 data:
   myConfigYAML: |-
-{{ .Values.configMap.myConfigYAML | nindent 4 }}
+    {{ .Values.configMap.myConfigYAML | nindent 4 }}
