@@ -1,1 +1,25 @@
-abc
+configMap:
+  projectName: project1
+  myConfigYAML: |
+    OrgName: cloudtech
+    ProjectName: lkam1
+    ServiceId: 123456
+    Environment: prod
+    systems:
+      vault:
+        resources:
+          paths:
+            - base_path: cloudtech/lkam
+              custom_paths:
+                - app/lkam_azure/sp_secrets
+              policy_base_name: cloudtech_lkam1_pro
+              roles:
+                admin:
+                  okta:
+                    - name: grp-cloudtech-lkam1-admi
+                power:
+                  okta:
+                    - name: grp-cloudtech-lkam1-power
+                read:
+                  okta:
+                    - name: grp-cloudtech-lkam1-readonly
